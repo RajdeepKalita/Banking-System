@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yelpcamp</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+<body>
+	<nav class="navbar navbar-default"S>
+  <div class="container-fluid" >
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+		<a class="navbar-brand" href="/">Yelpcamp</a>
+	  </div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/">Login</a></li>
+				<li><a href="/">Register</a></li>
+				<li><a href="/">Log Out</a></li>
+			</ul>
+		</div>
+		
+    
+ </div>
+</nav>
+	<div class="jumbotron">
+<h1 style="text-align:center;margin:0px auto">
+	Add your campground here
+</h1>
+<form action="/customers" method="POST">
+	
+	<input type="text" name="name" placeholder="name">
+	<input type="text" name="email" placeholder="email">
+	<input type="number"name="amount" placeholder="Amount">
+	<button class="btn btn-primary">
+		Submit
+	</button>
+</form>
+<a href="/customers">Go Back</a>
+</div>
+	<p>
+	tagmark Yelpcamp
+</p> 
+
+</body>
+</html>

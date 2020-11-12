@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark"  style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="#">Sparks Foundation</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="/customers">Customers</a>
+      <a class="nav-link" href="/history">Transaction History</a>
+      
+    </div>
+  </div>
+</nav>
+<div class="jumbotron">
+	
+	
+<div class="form-body1" style="text-align:center">
+    <h1>Transferring From </h1>
+    <h3>Customer Name : <%= fromUser.name %></h3>
+    <h3>Credits = <%= fromUser.balance %></h3>  
+</div>
+	</div>
+
+<div class="form-body2" style="text-align:center">
+    <h1>Transferring To : </h1>
+    <h3>Customer Name : <%= toUser.name %></h3>
+    <h3>Credits = <%= toUser.balance %></h3>
+</div>
+<div class="jumbotron">
+					 
+					 
+<div class="form" style="text-align:center">
+    <form action="/customers/<%= fromUser._id %>/<%= toUser._id %>?_method=PUT" method="POST">
+    <label for="credits">Amount to be transferred :</label>
+    <br>
+    <input type="number" id="credit" name="credit" placeholder="" value="">
+		
+    
+    <button class="btn btn-primary">Transfer</button>
+    </form>
+</div>
+	</div>
+
+	</body>
+</html>
